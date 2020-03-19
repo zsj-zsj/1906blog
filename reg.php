@@ -1,13 +1,8 @@
 <?php
-$name=$_POST['name'];
-$pwd=md5($_POST['pwd']);
-$email=$_POST['email'];
-$mibble=$_POST['mibble'];
-
-if(empty($name)){
-    header('refresh:1;url=reg.html');
-    echo "请输入用户名";die;  
-}
+$name=empty($_POST['name']) ? die('请返回输入用户名') : $_POST['name'];
+$pwd=empty($_POST['pwd']) ? die('请返回输入密码') : md5($_POST['pwd']);
+$email=empty($_POST['email']) ? die('请返回输入邮箱'):$_POST['email'];
+$mibble=empty($_POST['mibble']) ? die('请返回输入手机号'):$_POST['mibble'];
 
 $user='root';
 $pass='root';

@@ -19,6 +19,10 @@ if($data){
         header('refresh:1;url=login.html');
         echo "密码不正确";die;
     }else{
+        session_start();
+        $_SESSION['session']=array('id'=>$data['id'],'name'=>$data['name']);
+
+        header('refresh:1;url=article.php');
         echo "登陆成功";
     }
 }else{
