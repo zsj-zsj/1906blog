@@ -7,7 +7,7 @@ $mibble=empty($_POST['mibble']) ? die('请返回输入手机号'):$_POST['mibble
 $user='root';
 $pass='root';
 
-$dbh = new PDO('mysql:host=localhost;dbname=1906blog', $user, $pass);
+$dbh = new PDO('mysql:host=127.0.0.1;dbname=1906blog', $user, $pass);
 
 $sql="insert into reg (name,pwd,email,mibble) values (?,?,?,?)";
 

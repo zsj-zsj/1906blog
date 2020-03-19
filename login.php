@@ -4,7 +4,7 @@ $pwd=md5($_POST['pwd']);
 
 $user='root';
 $pass='root';
-$dbh= new PDO('mysql:host=localhost;dbname=1906blog',$user,$pass);
+$dbh= new PDO('mysql:host=127.0.0.1;dbname=1906blog',$user,$pass);
 
 $sql="select * from reg where name=?";
 

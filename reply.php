@@ -16,7 +16,7 @@ if(empty($reply)){
 
 $user='root';
 $pass='root';
-$dbh= new PDO('mysql:host=localhost;dbname=1906blog',$user,$pass);
+$dbh= new PDO('mysql:host=127.0.0.1;dbname=1906blog',$user,$pass);
 
 $sql="insert into reply (a_id,reply,rname) values (?,?,?)";
 
